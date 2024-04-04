@@ -3,3 +3,4 @@ dist
 .serverless
 .webpack
 .env
+.env.production

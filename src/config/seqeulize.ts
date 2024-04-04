@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize';
+import * as mysql2 from 'mysql2';
 import config from './index';
 
 const db = new Sequelize({
@@ -8,6 +9,7 @@ const db = new Sequelize({
     host: config.database.host,
     port: config.database.port,
     dialect: 'mysql',
+    dialectModule: mysql2,
     pool: {
         min: 1,
         max: 2,

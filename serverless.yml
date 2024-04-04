@@ -13,10 +13,10 @@ provider:
 # Serverless plugins used
 plugins:
     - serverless-bundle
-    - serverless-dotenv-plugin
 
 functions:
     main:
+        name: serverless-test
         handler: src/handlers/main.handler
         events:
             - http: ANY /
