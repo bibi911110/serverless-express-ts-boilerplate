@@ -16,8 +16,12 @@ plugins:
 
 functions:
     main:
-        name: serverless-test
+        name: serverless-main
         handler: src/handlers/main.handler
         events:
             - http: ANY /
             - http: ANY /{proxy+}
+
+    test:
+        name: serverless-test
+        handler: src/handlers/test.handler
