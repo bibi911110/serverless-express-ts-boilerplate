@@ -1,0 +1,23 @@
+service: serverless-express-ts-bolierplate
+
+# Create an optimized package for our functions
+package:
+    individually: true
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    stage: dev
+    region: ap-southeast-2
+
+# Serverless plugins used
+plugins:
+    - serverless-bundle
+    - serverless-dotenv-plugin
+
+functions:
+    main:
+        handler: src/handlers/main.handler
+        events:
+            - http: ANY /
+            - http: ANY /{proxy+}
