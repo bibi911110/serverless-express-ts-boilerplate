@@ -4,20 +4,31 @@
     "description": "A serverless boilerplate project, bundled with express and typescript.",
     "main": "handler.js",
     "scripts": {
-        "dev": "nodemon --exec ts-node src/app.ts",
+        "dev": "nodemon",
         "build": "tsc",
         "test": "serverless-bundle test",
         "deploy": "serverless deploy --stage production  --region ap-southeast-2"
     },
-    "keywords": [],
+    "keywords": [
+        "express.js",
+        "typescript",
+        "sequelize",
+        "serverless",
+        "backend",
+        "boilerplate"
+    ],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "@typescript-eslint/eslint-plugin": "^7.5.0",
         "@typescript-eslint/parser": "^7.5.0",
         "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
         "eslint": "^8.57.0",
         "express": "^4.19.2",
+        "joi": "^17.12.3",
+        "mysql2": "^3.9.3",
+        "sequelize": "^6.37.2",
         "serverless-http": "^3.2.0",
         "ts-node": "^10.9.2",
         "typescript": "^4.9.5"
